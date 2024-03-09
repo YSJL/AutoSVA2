@@ -62,7 +62,7 @@ genvar j;
 default clocking cb @(posedge clk_i);
 endclocking
 default disable iff (!rst_ni);
-/*
+
 // Re-defined wires 
 wire ptw_req_val;
 wire ptw_req_rdy;
@@ -254,7 +254,7 @@ assign ptw_res_val = req_port_i.data_rvalid;
 	 as__no_x_itlb_stable: assert property(itlb_val |-> !$isunknown(itlb_stable));
 	 as__no_x_itlb_data: assert property(itlb_val |-> !$isunknown(itlb_data));
 `endif
-*/
+
 //====DESIGNER-ADDED-SVA====//
 
 typedef enum logic [2:0] {
